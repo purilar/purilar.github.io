@@ -9,101 +9,108 @@
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
+            background: #f4f6f8;
+            color: #333;
         }
 
         header {
-            background: linear-gradient(135deg, #0a3d62, #1e5f8a);
+            background: linear-gradient(135deg, #0f3554, #1e5a88);
             color: white;
-            padding: 35px 20px;
             text-align: center;
+            padding: 50px 20px;
         }
 
-        nav {
-            background-color: #1e5f8a;
-            padding: 12px;
-            text-align: center;
+        header h1 {
+            margin: 0;
+            font-size: 36px;
         }
 
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
         }
 
         section {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
             padding: 30px;
-            background-color: white;
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        section h2 {
+            margin-top: 0;
+            color: #0f3554;
+        }
+
+        .servicos ul {
+            padding-left: 20px;
+        }
+
+        .servicos li {
+            margin-bottom: 10px;
+        }
+
+        .antes-depois {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .antes-depois div {
+            text-align: center;
+        }
+
+        .antes-depois img {
+            width: 260px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .botoes-contato {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .botao {
+            display: block;
+            width: 260px;
+            margin: 12px auto;
+            padding: 14px 0;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .whatsapp {
+            background: #25d366;
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+        }
+
+        .tiktok {
+            background: #000;
         }
 
         footer {
-            background-color: #0a3d62;
-            color: white;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
+            color: #666;
         }
 
-        /* BOTÕES NORMAIS */
-        .botao {
-            display: inline-block;
-            color: white;
-            padding: 14px 26px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .whatsapp { background-color: #25D366; }
-        .instagram { background: linear-gradient(45deg, #f09433, #bc1888); }
-        .tiktok { background-color: #000; }
-
-        /* BOTÃO FLUTUANTE */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: white;
-            padding: 16px 20px;
-            border-radius: 50px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-
-        .whatsapp-menu {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            display: none;
-            flex-direction: column;
-            gap: 10px;
-            z-index: 1000;
-        }
-
-        .whatsapp-menu a {
-            background-color: #25D366;
-            color: white;
-            padding: 12px 18px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-        }
-
-        .whatsapp-menu a:hover {
-            background-color: #1ebe5d;
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
-
 <body>
 
 <header>
@@ -111,55 +118,56 @@
     <p>Higienização profissional de estofados com qualidade e confiança</p>
 </header>
 
-<nav>
-    <a href="#contato">Contato</a>
-</nav>
-
-<section id="contato">
-    <h2>Contato</h2>
-    <p>Fale conosco pelo canal que preferir:</p>
-
-    <a href="https://wa.me/5511921402195" class="botao whatsapp" target="_blank">
-        📲 WhatsApp – Orçamentos
-    </a><br>
-
-    <a href="https://wa.me/5511971830629" class="botao whatsapp" target="_blank">
-        ⚡ WhatsApp – Atendimento Rápido
-    </a><br>
-
-    <a href="https://www.instagram.com/purilar_2025" class="botao instagram" target="_blank">
-        📸 Instagram
-    </a><br>
-
-    <a href="https://www.tiktok.com/@purilar" class="botao tiktok" target="_blank">
-        🎵 TikTok
-    </a>
+<section>
+    <h2>Quem Somos</h2>
+    <p>
+        A <strong>Purilar</strong> é especializada em higienização profissional de estofados,
+        oferecendo limpeza profunda, remoção de sujeiras, ácaros e odores.
+        Trabalhamos com responsabilidade, produtos adequados e foco total na satisfação do cliente.
+    </p>
 </section>
 
-<footer>
-    <p>© 2025 - Purilar</p>
+<section class="servicos">
+    <h2>Nossos Serviços</h2>
+    <ul>
+        <li>Higienização de Sofás</li>
+        <li>Limpeza de Colchões</li>
+        <li>Limpeza de Cadeiras Estofadas</li>
+        <li>Limpeza Poltronas</li>
+        <li>Serviço Automotivo</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Antes e Depois</h2>
+    <div class="antes-depois">
+        <div>
+            <p><strong>Antes</strong></p>
+            <img src="imagens/antes.jpg" alt="Antes da higienização">
+        </div>
+        <div>
+            <p><strong>Depois</strong></p>
+            <img src="imagens/depois.jpg" alt="Depois da higienização">
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Contato</h2>
+    <p style="text-align:center;">Fale conosco pelo canal que preferir:</p>
+
+    <div class="botoes-contato">
+        <a class="botao whatsapp" href="https://wa.me/5511999999999" target="_blank">WhatsApp – Orçamentos</a>
+        <a class="botao whatsapp" href="https://wa.me/5511888888888" target="_blank">WhatsApp – Atendimento Rápido</a>
+        <a class="botao instagram" href="https://www.instagram.com/purilar_2025" target="_blank">Instagram</a>
+        <a class="botao tiktok" href="https://www.tiktok.com/@purilar" target="_blank">TikTok</a>
+    </div>
+<p><strong>Email:</strong> purilar.higienização@gmail.com</p>
+    </section>
+
+    <footer>
+    © 2025 Purilar - Todos os direitos reservados
 </footer>
-
-<!-- BOTÃO FLUTUANTE COM MENU -->
-<div class="whatsapp-float" onclick="toggleWhatsApp()">
-    💬 WhatsApp
-</div>
-
-<div class="whatsapp-menu" id="whatsMenu">
-    <a href="https://wa.me/5511921402195" target="_blank">
-        📲 Orçamentos
-    </a>
-    <a href="https://wa.me/5511971830629" target="_blank">
-        ⚡ Atendimento Rápido
-    </a>
-</div>
-
-<script>
-    function toggleWhatsApp() {
-        const menu = document.getElementById("whatsMenu");
-        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-    }
-</script>
 
 </body>
 </html>
