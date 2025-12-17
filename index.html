@@ -3,134 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purilar - Higienização de Estofados</title>
+    <title>Higienização de Estofados</title>
+
     <style>
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             background-color: #f4f4f4;
         }
+
         header {
             background-color: #0a3d62;
             color: white;
             padding: 20px;
             text-align: center;
         }
+
         nav {
             background-color: #1e5f8a;
             padding: 10px;
             text-align: center;
         }
+
         nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
         }
-        nav a:hover {
-            text-decoration: underline;
-        }
+
         section {
             padding: 30px;
             background-color: white;
             margin: 20px;
             border-radius: 8px;
         }
+
         .servicos ul {
             list-style: none;
             padding: 0;
         }
+
         .servicos li {
             background-color: #eaeaea;
             margin: 10px 0;
             padding: 15px;
             border-radius: 5px;
         }
+
+        /* ÍCONES – TAMANHO CONTROLADO */
+        .icones {
+            margin-top: 15px;
+        }
+
+        .icones a {
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .icones img {
+            width: 28px;
+            height: 28px;
+            vertical-align: middle;
+        }
+
+        /* ANTES E DEPOIS */
+        .antes-depois {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .antes-depois img {
+            width: 220px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
         footer {
             background-color: #0a3d62;
             color: white;
             text-align: center;
             padding: 15px;
         }
-        .botao {
-            display: inline-block;
-            background-color: #0a3d62;
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        .botao:hover {
-            background-color: #062f4f;
-        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Purilar</h1>
-        <p>Limpeza profissional com qualidade e confiança</p>
-    </header>
+<header>
+    <h1>Higienização de Estofados</h1>
+    <p>Limpeza profissional com qualidade e confiança</p>
+</header>
 
-    <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#contato">Contato</a>
-    </nav>
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+</nav>
 
-    <section id="sobre">
-        <h2>Quem Somos</h2>
-        <p>
-            Somos especializados em higienização de estofados, oferecendo limpeza profunda,
-            remoção de ácaros, bactérias e odores. Trabalhamos com produtos seguros e equipamentos profissionais.
-        </p>
-    </section>
+<section id="sobre">
+    <h2>Quem Somos</h2>
+    <p>
+        Somos especializados em higienização de estofados, oferecendo limpeza profunda,
+        remoção de ácaros, bactérias e odores. Trabalhamos com produtos seguros e equipamentos profissionais.
+    </p>
+</section>
 
-    <section id="servicos" class="servicos">
-        <h2>Nossos Serviços</h2>
-        <ul>
-            <li>✔ Limpeza de Sofás</li>
-            <li>✔ Limpeza de Colchões</li>
-            <li>✔ Limpeza de Poltronas</li>
-            <li>✔ Limpeza de Cadeiras Estofadas</li>
-            <li>✔ Servoços Automotivos</li>
-        </ul>
-    </section>
+<section id="servicos" class="servicos">
+    <h2>Nossos Serviços</h2>
+    <ul>
+        <li>✔ Limpeza de Sofás</li>
+        <li>✔ Limpeza de Colchões</li>
+        <li>✔ Limpeza de Poltronas</li>
+        <li>✔ Limpeza de Cadeiras Estofadas</li>
+        <li>✔ Serviços Automotivos</li>
+    </ul>
 
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Entre em contato e solicite um orçamento sem compromisso.</p>
+    <h3>Antes e Depois</h3>
+    <div class="antes-depois">
+        <img src="imagens/antes.jpg" alt="Antes da limpeza">
+        <img src="imagens/depois.jpg" alt="Depois da limpeza">
+    </div>
+</section>
 
-      <p><strong>WhatsApp:</strong></p>
-<a href="https://wa.me/5511921402195" class="botao" target="_blank">
-(11) 92140-2195
-</a>
-<br><br>
-<a href="https://wa.me/5511971830629" class="botao" target="_blank">
-(11) 97183-0629
-</a>
+<section id="contato">
+    <h2>Contato</h2>
+    <p>Entre em contato e solicite um orçamento sem compromisso.</p>
 
+    <div class="icones">
+        <a href="https://wa.me/5511921402195" target="_blank">
+            <img src="imagens/whatsapp.png" alt="WhatsApp">
+        </a>
+        <a href="https://wa.me/5511971830629" target="_blank">
+            <img src="imagens/whatsapp.png" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/purilar_2025" target="_blank">
+            <img src="imagens/instagram.png" alt="Instagram">
+        </a>
+    </div>
 
-<p style="margin-top:20px;"><strong>Instagram:</strong></p>
-<a href="https://www.instagram.com/purilar_2025" class="botao" target="_blank">
-@purilar_2025
-</a>
+    <p style="margin-top:20px;"><strong>Email:</strong> purilar.higienização@gmail.com</p>
+</section>
 
-        <p><strong>Email:</strong> purilar.higienização@gmail.com</p>
-    </section>
-
-    <footer>
-        <p>© 2025 - Purilar | Todos os direitos reservados</p>
-    </footer>
+<footer>
+    <p>© 2025 - Higienização de Estofados | Todos os direitos reservados</p>
+</footer>
 
 </body>
 </html>
-
-
-
-  
-
-
-
-
