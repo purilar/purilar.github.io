@@ -3,40 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Higienização de Estofados</title>
+    <title>Purilar | Higienização de Estofados</title>
 
     <style>
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #f2f5f7;
+            color: #333;
         }
 
         header {
-            background-color: #0a3d62;
+            background: linear-gradient(135deg, #0a3d62, #1e5f8a);
             color: white;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            opacity: 0.95;
         }
 
         nav {
-            background-color: #1e5f8a;
-            padding: 10px;
+            background-color: #ffffff;
+            padding: 12px;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
         }
 
         nav a {
-            color: white;
+            color: #0a3d62;
             margin: 0 15px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         section {
-            padding: 30px;
+            padding: 35px;
             background-color: white;
-            margin: 20px;
-            border-radius: 8px;
+            margin: 25px auto;
+            border-radius: 10px;
+            max-width: 900px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+        }
+
+        section h2 {
+            color: #0a3d62;
+            margin-top: 0;
         }
 
         .servicos ul {
@@ -45,55 +69,58 @@
         }
 
         .servicos li {
-            background-color: #eaeaea;
+            background-color: #f0f4f7;
             margin: 10px 0;
             padding: 15px;
-            border-radius: 5px;
+            border-radius: 6px;
+            font-weight: 500;
         }
 
-        /* ÍCONES – TAMANHO CONTROLADO */
-        .icones {
-            margin-top: 15px;
-        }
-
-        .icones a {
-            text-decoration: none;
-            margin-right: 15px;
-        }
-
-        .icones img {
-            width: 28px;
-            height: 28px;
-            vertical-align: middle;
-        }
-
-        /* ANTES E DEPOIS */
         .antes-depois {
-            margin-top: 20px;
+            margin-top: 25px;
             display: flex;
-            gap: 15px;
+            gap: 20px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .antes-depois img {
-            width: 220px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
+            width: 260px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .icones {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .icones img {
+            width: 32px;
+            height: 32px;
+            transition: transform 0.2s ease;
+        }
+
+        .icones img:hover {
+            transform: scale(1.15);
         }
 
         footer {
             background-color: #0a3d62;
             color: white;
             text-align: center;
-            padding: 15px;
+            padding: 18px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Higienização de Estofados</h1>
-    <p>Limpeza profissional com qualidade e confiança</p>
+    <h1>Purilar</h1>
+    <p>Higienização profissional de estofados com qualidade e confiança</p>
 </header>
 
 <nav>
@@ -105,15 +132,16 @@
 <section id="sobre">
     <h2>Quem Somos</h2>
     <p>
-        Somos especializados em higienização de estofados, oferecendo limpeza profunda,
-        remoção de ácaros, bactérias e odores. Trabalhamos com produtos seguros e equipamentos profissionais.
+        A Purilar é especializada em higienização de estofados, oferecendo limpeza profunda,
+        eliminação de ácaros, bactérias e odores. Trabalhamos com equipamentos profissionais
+        e produtos seguros para sua família e seus pets.
     </p>
 </section>
 
 <section id="servicos" class="servicos">
     <h2>Nossos Serviços</h2>
     <ul>
-        <li>✔ Limpeza de Sofás</li>
+        <li>✔ Higienização de Sofás</li>
         <li>✔ Limpeza de Colchões</li>
         <li>✔ Limpeza de Poltronas</li>
         <li>✔ Limpeza de Cadeiras Estofadas</li>
@@ -129,7 +157,7 @@
 
 <section id="contato">
     <h2>Contato</h2>
-    <p>Entre em contato e solicite um orçamento sem compromisso.</p>
+    <p>Solicite agora mesmo um orçamento sem compromisso.</p>
 
     <div class="icones">
         <a href="https://wa.me/5511921402195" target="_blank">
@@ -138,16 +166,16 @@
         <a href="https://wa.me/5511971830629" target="_blank">
             <img src="imagens/whatsapp.png" alt="WhatsApp">
         </a>
-        <a href="https://www.instagram.com/purilar_2025" target="_blank">
+        <a href="https://www.instagram.com/purilar_" target="_blank">
             <img src="imagens/instagram.png" alt="Instagram">
         </a>
     </div>
 
-    <p style="margin-top:20px;"><strong>Email:</strong> purilar.higienização@gmail.com</p>
+    <p style="margin-top:25px;"><strong>Email:</strong> purilar.higienização@gmail.com</p>
 </section>
 
 <footer>
-    <p>© 2025 - Higienização de Estofados | Todos os direitos reservados</p>
+    <p>© 2025 - Purilar Higienização de Estofados | Todos os direitos reservados</p>
 </footer>
 
 </body>
