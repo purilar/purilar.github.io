@@ -65,15 +65,19 @@
       border-radius: 8px;
     }
 
-    .before-after {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
+      .before-after {
+       display: flex;
+       gap: 20px;
+       justify-content: center;
+       flex-wrap: wrap;
+     }
 
-    .before-after img {
-      width: 100%;
-      border-radius: 10px;
+      .before-after img {
+       width: 250px;
+       max-width: 100%;
+       border-radius: 8px;
+     }
+
     }
 
     /* CONTATOS FIXOS NO CANTO */
@@ -156,10 +160,9 @@
   <h2>Antes e Depois</h2>
 
   <div class="before-after">
-    <img src="./antes.jpg" alt="Antes">
-    <img src="./depois.jpg" alt="Depois">
+    <img src="antes.jpg" alt="Antes da limpeza">
+    <img src="depois.jpg" alt="Depois da limpeza">
   </div>
-
 </section>
 
 <footer>
@@ -184,6 +187,7 @@
 
 </body>
 </html>
+
 
 
 
