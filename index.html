@@ -4,99 +4,111 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Purilar - Higienização de Estofados</title>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
-    body { background: #f2f5f7; color: #333; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7f9;
+      color: #333;
+    }
 
-    /* TOPO */
-    .topo {
-      background: linear-gradient(135deg, #0f3c5c, #1e5f8a);
-      color: white;
+    header {
+      background: linear-gradient(135deg, #0b3c5d, #145374);
+      color: #fff;
       text-align: center;
-      padding: 45px 20px;
-    }
-    .topo h1 { font-size: 32px; }
-    .topo p { margin-top: 10px; font-size: 15px; }
-
-    /* MENU */
-    .menu {
-      background: white;
-      padding: 12px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .menu a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #1e5f8a;
-      font-weight: bold;
+      padding: 40px 20px;
     }
 
-    /* CARD PADRÃO */
-    .card {
-      max-width: 900px;
-      margin: 30px auto;
-      background: white;
-      padding: 25px;
-      border-radius: 18px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    header h1 {
+      margin: 0;
+      font-size: 32px;
     }
-    .card h2 { color: #1e5f8a; margin-bottom: 15px; }
-    .card p { line-height: 1.6; }
 
-    /* SERVIÇOS */
-    .servicos li {
-      list-style: none;
-      background: #eef3f7;
-      padding: 15px;
-      margin-bottom: 12px;
-      border-radius: 12px;
+    header p {
+      margin-top: 10px;
       font-size: 16px;
     }
 
-    /* ANTES E DEPOIS */
-    .antes-depois img {
+    nav {
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #145374;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+    }
+
+    section h2 {
+      color: #145374;
+    }
+
+    .services li {
+      list-style: none;
+      background: #eef3f7;
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    .before-after {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .before-after img {
       width: 100%;
-      max-width: 450px;
-      border-radius: 15px;
-      margin: 10px auto;
-      display: block;
+      border-radius: 10px;
     }
 
-    /* CONTATOS */
-    .contatos {
-      text-align: center;
-    }
-    .btn {
-      display: block;
-      max-width: 300px;
-      margin: 10px auto;
-      padding: 15px;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-    }
-    .whatsapp { background: #00d95f; }
-    .instagram { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af); }
-    .tiktok { background: black; }
-
-    /* BOTÃO FLUTUANTE */
-    .whats-fixo {
+    /* CONTATOS FIXOS NO CANTO */
+    .contact-fixed {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #00d95f;
-      color: white;
-      padding: 15px 18px;
-      border-radius: 50px;
+      right: 15px;
+      bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 999;
+    }
+
+    .contact-fixed a {
       text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 30px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .wpp {
+      background: #25d366;
+    }
+
+    .insta {
+      background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af);
+    }
+
+    .tiktok {
+      background: #000;
     }
 
     footer {
@@ -109,29 +121,29 @@
 </head>
 <body>
 
-<header class="topo">
+<header>
   <h1>Purilar</h1>
   <p>Higienização profissional de estofados com qualidade e confiança</p>
 </header>
 
-<nav class="menu">
+<nav>
   <a href="#sobre">Sobre</a>
   <a href="#servicos">Serviços</a>
   <a href="#antes">Antes e Depois</a>
-  <a href="#contato">Contato</a>
 </nav>
 
-<section id="sobre" class="card">
+<section id="sobre">
   <h2>Quem Somos</h2>
   <p>
-    A Purilar é especializada em higienização de estofados, oferecendo limpeza profunda, eliminação de ácaros, bactérias e odores.
-Trabalhamos com equipamentos profissionais e produtos seguros para sua família e seus pets.
+    A Purilar é especializada em higienização de estofados, oferecendo limpeza profunda,
+    eliminação de ácaros, bactérias e odores. Trabalhamos com equipamentos profissionais
+    e produtos seguros para sua família e seus pets.
   </p>
 </section>
 
-<section id="servicos" class="card">
+<section id="servicos">
   <h2>Nossos Serviços</h2>
-  <ul class="servicos">
+  <ul class="services">
     <li>✔ Higienização de Sofás</li>
     <li>✔ Limpeza de Colchões</li>
     <li>✔ Limpeza de Poltronas</li>
@@ -140,34 +152,33 @@ Trabalhamos com equipamentos profissionais e produtos seguros para sua família 
   </ul>
 </section>
 
-<section id="antesdepois">
-<h2>Antes e Depois</h2>
-<div class="antes-depois">
-<img src="imagens/antes.jpg" alt="Antes">
-<img src="imagens/depois.jpg" alt="Depois">
-</div>
+<section id="antes">
+  <h2>Antes e Depois</h2>
+  <div class="before-after">
+    <img src="antes.jpg" alt="Antes">
+    <img src="depois.jpg" alt="Depois">
+  </div>
 </section>
-
-
-<section id="contato">
-<h2>Contato</h2>
-<p>Email: <strong>purilar.higienizacao@gmail.com</strong></p>
-</section>
-
-
-<!-- BOTÕES FIXOS -->
-<div class="contatos-fixos">
-<a class="btn whats1" href="https://wa.me/5511921402195" target="_blank">WhatsApp Orçamentos</a>
-<a class="btn whats2" href="https://wa.me/5511971830629" target="_blank">WhatsApp Atendimento</a>
-<a class="btn insta" href="https://www.instagram.com/purilar_2025" target="_blank">Instagram</a>
-<a class="btn tiktok" href="https://www.tiktok.com/@purilar" target="_blank">TikTok</a>
-</div>
-
 
 <footer>
-© 2025 - Purilar Higienização de Estofados
+  <p>Email: purilar.higienizacao@gmail.com</p>
 </footer>
 
+<!-- CONTATOS NO CANTO -->
+<div class="contact-fixed">
+  <a class="wpp" href="https://wa.me/55921402195" target="_blank">
+    <i class="fab fa-whatsapp"></i> Orçamentos
+  </a>
+  <a class="wpp" href="https://wa.me/55971830629" target="_blank">
+    <i class="fab fa-whatsapp"></i> Atendimento
+  </a>
+  <a class="insta" href="https://instagram.com/purilar_2025" target="_blank">
+    <i class="fab fa-instagram"></i> Instagram
+  </a>
+  <a class="tiktok" href="https://tiktok.com/@purilar" target="_blank">
+    <i class="fab fa-tiktok"></i> TikTok
+  </a>
+</div>
 
 </body>
 </html>
