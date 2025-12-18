@@ -62,7 +62,24 @@
     .botao:hover {
       background-color: #062f4f;
     }
-  </style>
+    .servicos-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .servico {
+      background: #eef3f7;
+      padding: 18px;
+      border-radius: 10px;
+      font-weight: bold;
+      color: #145374;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+</style>
 </head>
 <body>
 
@@ -73,6 +90,7 @@
 
 <nav>
   <a href="#sobre">Sobre</a>
+  <a href="#servicos">Serviços</a>
   <a href="#contato">Contato</a>
 </nav>
 
@@ -86,13 +104,13 @@
 
 <section id="servicos">
   <h2>Nossos Serviços</h2>
-  <ul>
-    <li>✔ Higienização de Sofás</li>
-    <li>✔ Limpeza de Colchões</li>
-    <li>✔ Limpeza de Poltronas</li>
-    <li>✔ Limpeza de Cadeiras Estofadas</li>
-    <li>✔ Serviços Automotiva</li>
-  </ul>
+  <div class="servicos-box">
+    <div class="servico">🛋️ Limpeza de Sofás</div>
+    <div class="servico">🛏️ Limpeza de Colchões</div>
+    <div class="servico">🪑 Limpeza de Poltronas</div>
+    <div class="servico">🪑 Limpeza de Cadeiras Estofadas</div>
+    <div class="servico">🚗 Higienização Automotiva</div>
+  </div>
 </section>
 
 <section id="contato">
@@ -111,7 +129,7 @@
     <i class="fab fa-instagram"></i> Instagram
   </a>
 
-   <a class="botao" href="https://tiktok.com/purilar" target="_blank">
+  <a class="botao" href="https://tiktok.com/@purilar" target="_blank">
     <i class="fab fa-tiktok"></i> TikTok
   </a>
 
